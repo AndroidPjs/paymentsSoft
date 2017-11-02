@@ -1,0 +1,15 @@
+<img src="https://static.platzi.com/media/achievements/Badge-Ionic_1.png" />
+<h1>Login</h1>
+<ion-item>
+  <ion-label floating>Username</ion-label>
+  <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Password</ion-label>
+  <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+</ion-item>
+
+<div padding>
+  <button ion-button color="primaary" (tap)="login()" block>INGRESAR</button>
+</div>
