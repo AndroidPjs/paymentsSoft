@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
-import { HomePage } from '../home/home';
-import { MyApp } from '../../app/app.component';
+import { ClientPage } from '../client/client';
 
 import {
   AlertController,
@@ -36,7 +35,7 @@ export class LoginPage {
       loading.present();
       setTimeout(() => {
         loading.dismiss();
-        this.navCtrl.push(HomePage);
+        this.navCtrl.push(ClientPage);
       }, 3000);
     } else {
       let alert = this.alertCtrl.create({

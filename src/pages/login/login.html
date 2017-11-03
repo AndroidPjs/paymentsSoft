@@ -1,5 +1,6 @@
-<img src="https://static.platzi.com/media/achievements/Badge-Ionic_1.png" />
-<h1>Login</h1>
+<!-- <img src="https://static.platzi.com/media/achievements/Badge-Ionic_1.png" /> -->
+<<img src="../../assets/imgs/logo-1.png">
+<!-- <h1>Login</h1> -->
 <ion-item>
   <ion-label floating>Username</ion-label>
   <ion-input type="text" [(ngModel)]="user.username"></ion-input>
@@ -11,5 +12,8 @@
 </ion-item>
 
 <div padding>
-  <button ion-button color="primaary" (tap)="login()" block>INGRESAR</button>
+  <button ion-button color="primary" (tap)="login()" block>
+      <ion-icon name="log-in" style="margin-right: 10pt;"></ion-icon>
+    INGRESAR
+  </button>
 </div>
