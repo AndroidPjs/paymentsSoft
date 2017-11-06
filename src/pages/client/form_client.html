@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="{{color}}">
+    <button ion-button show menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{accion}} CLIENTE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>ID</ion-label>
+    <ion-input type="text" disabled></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Nombre y Apellidos</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Telef. / Cel.</ion-label>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Dirección</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>DNI</ion-label>
+    <ion-input type="number" max="99999999" min="10000000"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>RUC</ion-label>
+    <ion-input type="number" maxlength="11"></ion-input>
+  </ion-item>
+
+  <div padding>
+    <button ion-button color="secondary"  block>
+      <ion-icon name="md-download" style="margin-right: 10pt;"></ion-icon>
+      GUARDAR
+    </button>
+  </div>
+</ion-content>

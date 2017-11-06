@@ -1,21 +1,25 @@
 <ion-header>
-  <ion-toolbar color="primary" hideBackButton>
+  <ion-toolbar color="primary">
     <button ion-button show menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>CLIENTE</ion-title>
+    <ion-title>CLIENTES</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-<ion-list>
-  <ion-item>
-    <ion-thumbnail item-start>
-      <img src="img/thumbnail-totoro.png">
-    </ion-thumbnail>
-    <h2>My Neighbor Totoro</h2>
-    <p>Hayao Miyazaki • 1988</p>
-    <button ion-button clear item-end>View</button>
-  </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end (tap)="modifyClient()">Editar</button>
+    </ion-item>
+  </ion-list>
+
+  <button ion-fab color="secondary" class=add (tap)="newClient()">
+    <ion-icon name="add"></ion-icon>
+  </button>
 </ion-content>

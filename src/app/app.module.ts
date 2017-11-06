@@ -9,13 +9,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { ClientPage } from '../pages/client/client';
+import { FormClientPage } from '../pages/client/form_client';
 
 @NgModule({
   declarations: [
     MyApp,
     ListPage,
     LoginPage,
-    ClientPage
+    ClientPage,
+    FormClientPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { ClientPage } from '../pages/client/client';
     MyApp,
     ListPage,
     LoginPage,
-    ClientPage
+    ClientPage,
+    FormClientPage
   ],
   providers: [
     StatusBar,
