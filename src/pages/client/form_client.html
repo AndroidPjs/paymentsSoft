@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-toolbar color="{{color}}">
+  <ion-navbar color="{{color}}">
     <button ion-button show menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>{{accion}} CLIENTE</ion-title>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
@@ -13,28 +13,28 @@
     <ion-input type="text" disabled></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Nombre y Apellidos</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label floating>Nombre y Apellidos *</ion-label>
+    <ion-input type="text" [(ngModel)]="cli.nomApe" required></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Telef. / Cel.</ion-label>
-    <ion-input type="tel"></ion-input>
+    <ion-label floating>Telef. / Cel. *</ion-label>
+    <ion-input type="tel" [(ngModel)]="cli.telefCel" required></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Dirección</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label floating>Dirección *</ion-label>
+    <ion-input type="text" [(ngModel)]="cli.address" required></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>DNI</ion-label>
-    <ion-input type="number" max="99999999" min="10000000"></ion-input>
+    <ion-label floating>DNI *</ion-label>
+    <ion-input type="number" max="99999999" min="10000000" [(ngModel)]="cli.dni" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>RUC</ion-label>
-    <ion-input type="number" maxlength="11"></ion-input>
+    <ion-input type="number" maxlength="11" [(ngModel)]="cli.ruc"></ion-input>
   </ion-item>
 
   <div padding>
-    <button ion-button color="secondary"  block>
+    <button type="submit" ion-button color="secondary"  block (tap)="guardar()">
       <ion-icon name="md-download" style="margin-right: 10pt;"></ion-icon>
       GUARDAR
     </button>
