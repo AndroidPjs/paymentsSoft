@@ -1,3 +1,4 @@
+import { DeudasPage } from './../pages/deudas/deudas';
 import { ClientPage } from './../pages/client/client';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -22,7 +23,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Clientes', component: ClientPage },
-      { title: 'List', component: ListPage }
+      { title: 'Deudas', component: DeudasPage }
     ];
 
   }

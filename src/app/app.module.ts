@@ -12,6 +12,7 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { LoginPage } from "../pages/login/login";
 import { ClientPage } from "../pages/client/client";
 import { FormClientPage } from "../pages/client/form_client";
+import { DeudasPage } from "../pages/deudas/deudas";
 
 export const CONFIG = {
   apiKey: "AIzaSyB3lBK8iL6BfTSBPZ1N8LpHEaNZwRsXCU4",
@@ -23,7 +24,14 @@ export const CONFIG = {
 };
 
 @NgModule({
-  declarations: [MyApp, ListPage, LoginPage, ClientPage, FormClientPage],
+  declarations: [
+    MyApp,
+    ListPage,
+    LoginPage,
+    ClientPage,
+    FormClientPage,
+    DeudasPage
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
@@ -31,7 +39,14 @@ export const CONFIG = {
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, ListPage, LoginPage, ClientPage, FormClientPage],
+  entryComponents: [
+    MyApp,
+    ListPage,
+    LoginPage,
+    ClientPage,
+    FormClientPage,
+    DeudasPage
+  ],
   providers: [
     StatusBar,
     SplashScreen,

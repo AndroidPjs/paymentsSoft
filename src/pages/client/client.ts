@@ -28,10 +28,11 @@ export class ClientPage {
     });
   }
 
-  modifyClient() {
+  modifyClient(client) {
     this.navCtrl.push(FormClientPage, {
       action: "EDITAR",
-      color: "secondary"
+      color: "secondary",
+      element: client
     });
   }
 }

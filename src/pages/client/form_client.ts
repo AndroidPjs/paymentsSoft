@@ -15,9 +15,12 @@ export class FormClientPage {
   accion: string = "TEST";
   color: string;
 
+  temp: any;
+
   cli = {
-    nomApe: "",
-    telefCel: "",
+    $key: "",
+    nom_ape: "",
+    telef_cel: "",
     address: "",
     dni: "",
     ruc: ""
@@ -33,20 +36,19 @@ export class FormClientPage {
   ) {
     this.accion = navParams.get("action");
     this.color = navParams.get("color");
+    console.log(navParams.get("element"));
+    if (navParams.get("element") != null) {
+      this.cli = navParams.get("element");
+    }
   }
 
-  guardar() {
-    if (
-      this.cli.nomApe != "" &&
-      this.cli.telefCel != "" &&
-      this.cli.address != "" &&
-      this.cli.dni != ""
-    ) {
+  createClient() {
+    if (this.validarCampos()) {
       this.client = this.database.list("/clients");
       // console.log(this.cli);
       this.client.push({
-        nom_ape: this.cli.nomApe,
-        telef_cel: this.cli.telefCel,
+        nom_ape: this.cli.nom_ape,
+        telef_cel: this.cli.telef_cel,
         address: this.cli.address,
         dni: this.cli.dni,
         ruc: this.cli.ruc
@@ -55,6 +57,44 @@ export class FormClientPage {
       this.presentToast("Cliente creado con éxito");
     } else {
       this.presentToast("Los campos con ( * ) no pueden estar vacios");
+    }
+  }
+
+  updateClient() {
+    if (this.validarCampos()) {
+      this.client = this.database.list("/clients");
+      // console.log(this.cli);
+      this.client.update(this.cli.$key, {
+        nom_ape: this.cli.nom_ape,
+        telef_cel: this.cli.telef_cel,
+        address: this.cli.address,
+        dni: this.cli.dni,
+        ruc: this.cli.ruc
+      });
+      this.navCtrl.push(ClientPage);
+      this.presentToast("Cliente modificado con éxito");
+    } else {
+      this.presentToast("Los campos con ( * ) no pueden estar vacios");
+    }
+  }
+
+  validarCampos() {
+    return (
+      this.cli.nom_ape != "" &&
+      this.cli.telef_cel != "" &&
+      this.cli.address != "" &&
+      this.cli.dni != ""
+    );
+  }
+
+  execute() {
+    switch (this.accion) {
+      case "NUEVO":
+        this.createClient();
+        break;
+      case "EDITAR":
+        this.updateClient();
+        break;
     }
   }
 

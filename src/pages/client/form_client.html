@@ -9,16 +9,12 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-label floating>ID</ion-label>
-    <ion-input type="text" disabled></ion-input>
-  </ion-item>
-  <ion-item>
     <ion-label floating>Nombre y Apellidos *</ion-label>
-    <ion-input type="text" [(ngModel)]="cli.nomApe" required></ion-input>
+    <ion-input type="text" [(ngModel)]="cli.nom_ape" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Telef. / Cel. *</ion-label>
-    <ion-input type="tel" [(ngModel)]="cli.telefCel" required></ion-input>
+    <ion-input type="tel" [(ngModel)]="cli.telef_cel" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Dirección *</ion-label>
@@ -34,7 +30,7 @@
   </ion-item>
 
   <div padding>
-    <button type="submit" ion-button color="secondary"  block (tap)="guardar()">
+    <button type="submit" ion-button color="secondary"  block (tap)="execute()">
       <ion-icon name="md-download" style="margin-right: 10pt;"></ion-icon>
       GUARDAR
     </button>
