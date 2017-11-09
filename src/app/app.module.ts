@@ -1,3 +1,4 @@
+import { ClientsPage } from './../pages/deudas/clients';
 import { AngularFireDatabaseModule } from "angularfire2/database-deprecated";
 import { AngularFireModule } from "angularfire2";
 import { BrowserModule } from "@angular/platform-browser";
@@ -13,6 +14,7 @@ import { LoginPage } from "../pages/login/login";
 import { ClientPage } from "../pages/client/client";
 import { FormClientPage } from "../pages/client/form_client";
 import { DeudasPage } from "../pages/deudas/deudas";
+import { FormDeudasPage } from "../pages/deudas/form_deudas";
 
 export const CONFIG = {
   apiKey: "AIzaSyB3lBK8iL6BfTSBPZ1N8LpHEaNZwRsXCU4",
@@ -30,7 +32,9 @@ export const CONFIG = {
     LoginPage,
     ClientPage,
     FormClientPage,
-    DeudasPage
+    DeudasPage,
+    FormDeudasPage,
+    ClientsPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ export const CONFIG = {
     LoginPage,
     ClientPage,
     FormClientPage,
-    DeudasPage
+    DeudasPage,
+    FormDeudasPage,
+    ClientsPage
   ],
   providers: [
     StatusBar,

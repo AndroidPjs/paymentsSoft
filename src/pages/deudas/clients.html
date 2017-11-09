@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button show menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>LISTADO DE CLIENTES</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let item of clients | async" (click)="selectedClient(item)">
+                {{item.nom_ape}}
+            </button>
+    </ion-list>
+</ion-content>
